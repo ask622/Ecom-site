@@ -1,5 +1,5 @@
 import React from 'react'
-import cate from '../assets/Logo/cate.jpg'
+import cate from '../assets/Logo/Cate.jpg';
 
 const About = () => {
   return (
