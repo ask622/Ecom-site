@@ -1,23 +1,53 @@
-// src/components/Navbar.jsx
 import React, { useState } from "react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState("EN");
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleDropdown = () => setLangOpen(!langOpen);
+
   const selectLang = (lang) => {
     setSelectedLang(lang);
-    setIsOpen(false);
+    setLangOpen(false);
   };
 
   return (
-    <nav className="bg-white px-6 py-4 shadow-md m-4 ">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <span className="text-4xl font-bold text-[#8D3D8C]">STYLICLE</span>
+    <nav className="bg-white shadow-md px-4 py-3">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="text-3xl font-bold text-[#8D3D8C]">STYLICLE</div>
+        <div className="md:hidden">
+          <button onClick={toggleMenu} className="focus:outline-none">
+            <svg
+              className="w-6 h-6 text-black"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {menuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
         </div>
-        <div className=" text-xl  flex items-center space-x-8 ">
+        <div
+          className={`flex-col md:flex md:flex-row md:items-center md:space-x-8 space-y-4 md:space-y-0 mt-4 md:mt-0 ${
+            menuOpen ? "flex" : "hidden"
+          } md:flex`}
+        >
           <a href="#" className="text-black hover:text-[#8D3D8C] font-normal">
             Home
           </a>
@@ -34,17 +64,17 @@ const Navbar = () => {
             >
               {selectedLang} ⌄
             </button>
-            {isOpen && (
+            {langOpen && (
               <div className="absolute right-0 mt-2 w-20 bg-white border border-gray-300 rounded shadow z-10">
                 <button
                   onClick={() => selectLang("EN")}
-                  className="block px-4 py-2 text-sm hover:bg-gray-100 w-full text-left"
+                  className="block px-3 py-1 text-sm hover:bg-gray-100 w-full text-left"
                 >
                   EN
                 </button>
                 <button
                   onClick={() => selectLang("HI")}
-                  className="block px-4 py-2 text-sm hover:bg-gray-100 w-full text-left"
+                  className="block px-3 py-1 text-sm hover:bg-gray-100 w-full text-left"
                 >
                   HI
                 </button>
@@ -53,13 +83,13 @@ const Navbar = () => {
           </div>
           <a
             href="#"
-            className="border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition"
+            className="border border-black px-3 py-1 rounded hover:bg-black hover:text-white transition text-center"
           >
             Login
           </a>
           <a
             href="#"
-            className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
+            className="bg-black text-white px-3 py-1 rounded hover:bg-gray-800 transition text-center"
           >
             Signup
           </a>
