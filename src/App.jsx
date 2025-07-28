@@ -11,7 +11,7 @@ import Includes from './components/Includes';
 import Testimonial from './components/Testimonial';
 import SingleSidebar from './components/SingleSiderbar';
 import CallToAction from './components/CallToAction';
-import Blog from './components/blog';
+import Blog from './components/Blog';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 function App() {
