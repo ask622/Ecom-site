@@ -57,18 +57,16 @@ const Recommanded = () => {
                   alt={service.title}
                   className='w-full h-36 sm:h-32 rounded-t-xl object-cover'
                 />
-                <div className='flex items-center gap-2 mt-3 ml-4'>
-                  <FaRegStar className='text-[#ba7894]' />
-                  <p className='text-[#ba7894] text-sm'>4.5</p>
-                  <h1 className='text-sm font-semibold text-gray-600'>104 reviews</h1>
-                </div>
+                <div className='flex flex-row gap-1 pb-2 mt-3 ml-5'>
+                <FaRegStar className='text-[#ba7894] '/>
+                <p className='text-[#ba7894]'>4.5</p>
+                <h1 className='ml-20 font-bold'>104 reviews </h1>
+              </div>
                 <h3 className='font-bold text-base mt-2 mb-1 ml-4'>{service.title}</h3>
                 <p className='ml-4 text-sm text-gray-500'>{service.desc}</p>
-                <div className='ml-4 mt-4 mb-4'>
-                  <button className='border border-[#ba7894] text-[#ba7894] px-4 py-1 rounded-sm hover:bg-[#ba7894] hover:text-white transition-all'>
-                    Book now
-                  </button>
-                </div>
+                <div className='ml-10 mt-5'>
+                <button className='border border-[#ba7894] text-[#ba7894] w-37 h-10 rounded-sm  cursor-pointer hover:bg-[#ba7894] hover:text-white transition-all'>Book now</button>
+              </div>
               </div>
             ))}
           </div>

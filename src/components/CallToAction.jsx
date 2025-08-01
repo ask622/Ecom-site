@@ -27,7 +27,7 @@ const CallToAction = () => {
           </p>
 
           {/* Form */}
-          <form className="flex flex-col sm:flex-row items-center gap-3 border rounded-full px-4 py-2 w-full max-w-md mx-auto md:mx-0 shadow-sm">
+          <form className="flex flex-col sm:flex-row items-center gap-3 border rounded-3xl lg:rounded-full px-4 py-2 w-full max-w-md mx-auto md:mx-0 shadow-sm">
             <div className="flex items-center w-full sm:w-auto gap-2">
               <FiMail className="text-blue-600 text-xl" />
               <input
@@ -38,7 +38,7 @@ const CallToAction = () => {
             </div>
             <button
               type="submit"
-              className="bg-black text-white text-sm px-5 py-2 rounded-full hover:bg-gray-800 transition-all w-full sm:w-auto"
+              className="bg-black text-white text-sm lg:ml-10 px-5 py-2  rounded-full hover:bg-gray-800 transition-all w-full sm:w-auto"
             >
               Subscribe
             </button>

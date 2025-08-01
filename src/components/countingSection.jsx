@@ -2,7 +2,7 @@ import React from 'react';
 const  CountingSection = () =>{
  return(
     <div>
-        <div className=' bg-black h-25 flex items-center justify-center  p-1 overflow-hidden  mt-10 w-screen'>
+        <div className=' bg-black h-25 flex items-center justify-center  p-1 overflow-hidden  mt-10 w-100%'>
             <div className='bg-[#ba7894] w-30 h-30 rounded-full -ml-30  mt-20'>
             </div>
             <div className='flex flex-row gap-20'>

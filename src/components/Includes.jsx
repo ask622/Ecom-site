@@ -4,7 +4,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const Includes = () => {
     return (
-        <div className="w-full px-4 md:px-10 mt-10">
+        <div className="w-full pl-4 ">
             <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
                 
                 {/* Left Content - Text Section */}
@@ -41,11 +41,11 @@ const Includes = () => {
                 </div>
 
                 {/* Right Image (Shown first in mobile via flex-col-reverse) */}
-                <div className="w-full lg:w-1/2 flex justify-center mb-6 lg:mb-0">
+                <div className="w-full lg:w-1/2 flex justify-center mb-6   lg:mb-0">
                     <img
                         src={Img1}
                         alt="Includes"
-                        className="w-full max-w-md h-auto object-cover rounded-md"
+                        className="w-full  h-130 object-cover "
                     />
                 </div>
             </div>

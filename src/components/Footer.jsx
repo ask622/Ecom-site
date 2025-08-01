@@ -64,7 +64,7 @@ const Footer = () => {
 
       {/* Bottom Copyright */}
       <div className="mt-10 text-center text-sm bg-[#160813] py-3 w-full">
-        © 2025, Created by Pawan Gangwar | All rights reserved.
+       
       </div>
     </div>
   );

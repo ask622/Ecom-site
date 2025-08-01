@@ -31,8 +31,9 @@ const Icon = () => {
             <div className="flex items-center justify-center sm:hidden">
                 {/* Left Arrow */}
                 <button onClick={handlePrev} className="mx-0">
-                    <IoIosArrowBack className={`text-black text-2xl hover:text-[#b21858] ${startIndex === 0 ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer'}`} />
+                    <IoIosArrowBack className={`text-black text-2xl  hover:text-[#b21858] ${startIndex === 0 ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer'}`} />
                 </button>
+                
 
                 {/* Icon Images */}
                 <div className="flex gap-4 px-2">
@@ -53,17 +54,26 @@ const Icon = () => {
                 </button>
             </div>
 
+
             {/* Desktop View: All Icons */}
-            <div className="hidden sm:flex items-center justify-center gap-4">
+            
+            <div className="hidden sm:flex items-center justify-center gap-21">
+
+                <button onClick={handlePrev} className="mx-0">
+                    <IoIosArrowBack className={`text-black text-2xl  hover:text-[#b21858] ${startIndex === 0 ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer'}`} />
+                </button>
                 {icons.map((imgSrc, index) => (
-                    <div key={index} className="w-24 h-20 flex-shrink-0">
+                    <div key={index} className="w-24 h-20  flex-shrink-0">
                         <img
                             src={imgSrc}
                             alt={`Icon ${index + 1}`}
-                            className="w-full h-full object-cover opacity-80 rounded-md"
+                            className="w-full h-full object-cover   opacity-80 rounded-md"
                         />
                     </div>
                 ))}
+            <button onClick={handleNext} className="mx-0">
+                    <IoIosArrowForward className={`text-black text-2xl hover:text-[#b21858] ${startIndex + 3 >= icons.length ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer'}`} />
+                </button>
             </div>
         </div>
     );
